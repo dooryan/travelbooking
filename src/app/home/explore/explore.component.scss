@@ -1,0 +1,37 @@
+
+
+.new-background-color{
+  --background: #579b9f;
+}
+
+ion-row{
+  margin-top:  0 !important;
+  ion-card{
+      width:100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      height: 180px;
+      width: 130px;
+}
+
+img { 
+    height: 130px;
+    
+
+}
+}
+
+ion-card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+     text-align: left;
+    letter-spacing: 0px;
+    word-spacing: 0.4px;
+    color: #111010;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+

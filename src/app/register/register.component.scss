@@ -1,0 +1,21 @@
+
+.text-center {
+    margin-top: 20%;
+    color: black;
+    text-align: center;
+    font-size: large;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.ion-padding {
+    margin-top: 10%;
+
+}
+
+
+ion-content {
+    --background: none;
+    background-image: url('/assets/images/11927.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,31 @@
+<ion-content>
+ 
+
+  <ion-row color="primary" justify-content-center></ion-row>
+
+  <div class ="text-center"> 
+    <p> Sign in </p>
+  </div>
+
+  <div class="ion-padding">
+ 
+    <ion-item> 
+    <ion-input name="email" type="email" placeholder="email" ></ion-input>
+    </ion-item>
+    <ion-item> 
+    <ion-input name="password" type="password" placeholder="password"></ion-input>
+    </ion-item> 
+    
+    <ion-button  color="light" shape="round" fill="solid" expand="block" [routerLink]="['/home/main']"> GO </ion-button>
+    
+  </div>
+
+   <div class="button-action">
+     <p> New User? <br> </p>
+     <ion-button fill="clear" [routerLink]="['/register']" > <b>Register </b> </ion-button>
+        
+   
+  </div>
+
+
+</ion-content>

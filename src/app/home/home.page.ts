@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ModalController } from '@ionic/angular';
+;
 
 @Component({
   selector: 'app-home',
