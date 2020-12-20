@@ -2,8 +2,8 @@
   <ion-list> 
   <ion-grid> 
     <ion-row> 
-  <ion-col *ngFor ="let item of placeList">
-      <ion-card button="true" color="#f5f6f9" (click)="openDetails(item.id)">
+  <ion-col *ngFor ="let item of placeDetail">
+      <ion-card button="true" color="#f5f6f9">
         <img src="{{item.imagePath}}">
           <ion-card-content> 
             <h2>{{item.placeName}}</h2> 

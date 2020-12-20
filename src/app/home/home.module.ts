@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { ExploreComponent } from './explore/explore.component';
 import { DestinationsComponent } from './explore/destinations/destinations.component';
 import { HomePageRoutingModule } from './home-routing.module';
+import { DetailsComponent } from './explore/destinations/details/details.component';
 
 
 @NgModule({
@@ -17,6 +18,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, AccountComponent, MainComponent, ExploreComponent]
+  declarations: [HomePage, AccountComponent, 
+                MainComponent, ExploreComponent, 
+                DestinationsComponent, DetailsComponent]
 })
 export class HomePageModule {}
