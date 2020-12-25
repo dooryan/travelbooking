@@ -1,0 +1,54 @@
+<ion-header> 
+   <ion-toolbar>
+       <ion-buttons slot="start">
+            <ion-back-button>
+
+            </ion-back-button>
+       </ion-buttons>
+      <ion-text> Book</ion-text>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="fill-up-form">
+        <div class="fields">
+            <ion-item> 
+                <ion-label> Name </ion-label>
+                <ion-input> </ion-input>
+           </ion-item>
+
+            <ion-item> 
+                <ion-label> Phone Number </ion-label>
+                <ion-input name= "phone_number" [(ngModel)]="booking.phone_number"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Visit Start</ion-label>
+                <ion-datetime name= "visit_date" [(ngModel)]="booking.visit_arrival"  displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Visit End</ion-label>
+                <ion-datetime name= "visit_ends" [(ngModel)]="booking.visit_departure"   displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>No. of adults</ion-label>
+                <ion-input name= "adults" [(ngModel)]="booking.adults" type="number"  min="1" max="9" placeholder="1"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>No. of children</ion-label>
+                <ion-input name= "children" [(ngModel)]="booking.children"  type="number"  min="1" max="9" placeholder="1"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-button (click)="book()"> Book/Reserved</ion-button>
+            </ion-item>
+
+
+
+
+        </div>
+    </div>
+</ion-content>

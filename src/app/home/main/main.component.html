@@ -11,57 +11,61 @@
        sa ubos kay -->
   
 
-<div class="top">
+<div class="top"> 
  <ion-label>Top Destinations </ion-label> 
-  <ion-slides>
-    <ion-slide>
+  <ion-slides >
+    <ion-slide *ngFor="let i of top">
       <ion-card>
+        <img src="{{i.imagePath}}">
         <ion-card-content>
-        <h1>PLACE 1</h1>
-
+        <h1>{{i.placeName}}</h1>
         </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>
-
-  <ion-label> This week's top Beach Resorts</ion-label>
-  <ion-slides>
-    <ion-slide>
-      <ion-card>
-        <ion-card-content>
-          <h1>Beach 1</h1>
-
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
-
-  <ion-label> This week's top Inland Resorts</ion-label>
-  <ion-slides>
-    <ion-slide>
-      <ion-card>
-        <ion-card-content>
-          <h1>Resort 1</h1>
-
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
-
-  <ion-label>Instagram worthy getaway</ion-label>
-  <ion-slides>
-    <ion-slide>
-      <ion-card>
-        <ion-card-content>
-          <h1>Beach 1</h1>
-
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
-
-
 </div>
+<div class="top_beach"> 
+  <ion-label> This week's top Beach Resorts</ion-label>
+  <ion-slides >
+    <ion-slide *ngFor="let i of bc">
+      <ion-card>
+        <img src="{{i.imagePath}}">
+        <ion-card-content>
+        <h1>{{i.placeName}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>
+
+<div class="top_inland"> 
+  <ion-label> This week's top Inland Resorts</ion-label>
+  <ion-slides >
+    <ion-slide *ngFor="let i of il">
+      <ion-card>
+        <img src="{{i.imagePath}}">
+        <ion-card-content>
+        <h1>{{i.placeName}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>
+<div class="top_botanical"> 
+  <ion-label>Instagram worthy getaway</ion-label>
+  <ion-slides >
+    <ion-slide *ngFor="let i of bot">
+      <ion-card>
+        <img src="{{i.imagePath}}">
+        <ion-card-content>
+        <h1>{{i.placeName}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>
+
+
 
 
 

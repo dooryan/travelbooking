@@ -27,6 +27,7 @@ export class DestinationsComponent implements OnInit {
     console.log(this.tag);
     this.getPlaces(this.tag);
     
+    
   }
 
   

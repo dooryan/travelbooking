@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { PlacesService } from 'src/app/services/places/places.service';
+import { BookingsComponent } from 'src/app/home/bookings/bookings.component';
+import { placeDetail, PlacesService } from 'src/app/services/places/places.service';
+import { threadId } from 'worker_threads';
 
 
 @Component({
@@ -10,46 +12,62 @@ import { PlacesService } from 'src/app/services/places/places.service';
 })
 export class DetailsComponent implements OnInit {
 
-  @Input() flag: any
-  placeDetail =[]
+  @Input() flag: number
+  
+ 
+
+   
+  p = [ ]
+  pl: any
   pList = []
+
+  
+  
+  num: number
+  
 
   constructor(private placesService: PlacesService,
               private modalController: ModalController) { }
 
   ngOnInit() {
     console.log(this.flag);
-    this.getDetail();
-    console.log(this.placeDetail[0]);
-    
+    this.getPlacebyID();
   }
 
 
- /* 
-  showDetail() {
-    this.placeDetail = JSON.parse(localStorage.getItem('place'));
-    console.log(this.placeDetail);
-  } */
-
-
-  getDetail() {
   
-    this.placesService.getAllPlaces().subscribe(
-      places => {
-        this.pList= places;
-      }
-    ) 
-      //let f = this.flag;
-      for(let index = 0; index < this.pList.length; index++) {
-           if(this.flag == this.pList[index].id){
-                this.placeDetail.unshift(this.pList[index])
+   
+   
 
-               //localStorage.setItem('place', JSON.stringify(this.placeDetail));
-       
-          }
-    
+
+    getPlacebyID() {
+      this.placesService.getAllPlaces().subscribe(
+        places => {
+          this.p=places;
+        console.log(places);
+
+        for(let i=0; i<places.length; i++) {
+          if(this.flag==this.p[i].id) {
+              this.pList=this.p[i];
+              console.log(this.pList)
+          }}})
     }
-  }
+
+    
+    async openBookings() {
+      const modal = await this.modalController.create({
+        component: BookingsComponent,
+        cssClass: 'my-custom-css',
+        swipeToClose: true,
+       // presentingElement: this.routerOutlet.nativeEl,
+        componentProps: { 
+          flag: this.flag,  
+        } });
+       await modal.present();
+    }
+
+    
+ 
 
 
 

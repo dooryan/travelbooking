@@ -2,16 +2,21 @@
   <ion-list> 
   <ion-grid> 
     <ion-row> 
-  <ion-col *ngFor ="let item of placeDetail">
+  <ion-col >
       <ion-card button="true" color="#f5f6f9">
-        <img src="{{item.imagePath}}">
+        <img src="{{pList.imagePath}}">
           <ion-card-content> 
-            <h2>{{item.placeName}}</h2> 
-          <ion-card-title><b><h1> {{item.description}}</h1></b> </ion-card-title>
-           <p>{{item.location}}
+            <ion-card-header>
+              <h2>{{pList.placeName}}</h2> 
+            </ion-card-header>
+          <ion-card-title><b><h1> {{pList.description}}</h1></b> </ion-card-title>
+           <p>{{pList.location}}
          </ion-card-content>
          
-        <ion-button  shape="round" size="small" style="font-size: 8pt;"><span style="padding-left: 10%; margin-right: 15%;">Book</span></ion-button>  
+        <ion-button (click) ="openBookings()" shape="round" size="small" style="font-size: 8pt;">
+          <span style="padding-left: 10%; margin-right: 15%;">
+            Book
+        </span></ion-button>  
       </ion-card> 
     </ion-col>
   </ion-row>

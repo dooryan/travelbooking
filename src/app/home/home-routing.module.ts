@@ -6,6 +6,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
+  
   {
     path: '',
     component: HomePage,
